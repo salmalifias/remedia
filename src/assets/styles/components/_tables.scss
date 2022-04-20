@@ -1,12 +1,10 @@
-/* Tables */
-
 .table {
   margin-bottom: 0;
   color: $text-muted; 
   thead {
     th {
       border-top: 0;
-      border-bottom-width: 1px;
+      border-bottom-width: 0px;
       font-family: $type1;
       font-weight: $font-weight-medium;
       i{
@@ -26,12 +24,6 @@
     }
     .badge {
       margin-bottom: 0;
-    }
-  }
-  &.table-borderless{
-    border: none;
-    tr,td,th{
-      border: none;
     }
   }
 }

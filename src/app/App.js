@@ -15,9 +15,9 @@ class App extends Component {
     let sidebarComponent = !this.state.isFullPageLayout ? <Sidebar/> : '';
     return (
       <div className="container-scroller">
-        {/* { sidebarComponent} */}
+        { sidebarComponent}
         <div className="container-fluid page-body-wrapper">
-          {/* { navbarComponent } */}
+          { navbarComponent }
           <div className="main-panel">
             <div className="content-wrapper">
               <AppRoutes/>
@@ -26,12 +26,6 @@ class App extends Component {
         </div>
        </div>
     );
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      this.onRouteChanged();
-    }
   }
 
   onRouteChanged() {

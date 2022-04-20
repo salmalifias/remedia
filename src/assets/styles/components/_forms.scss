@@ -1,10 +1,11 @@
-/* Forms */
-
 .form-group {
   margin-bottom: 1rem;
 }
-.form-cari {
-  margin-right: 1rem;
+.form-sort {
+  width: 200px !important;
+  margin-right: 0.8rem !important;
+  position: relative;
+  display: inline-block;
 }
 .input-group-append,
 .input-group-prepend {

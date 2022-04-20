@@ -1,6 +1,4 @@
-
 ////////// COLOR SYSTEM //////////
-
 $blue:              #5E50F9;
 $indigo:            #6610f2;
 $purple:            #6a008a;
@@ -17,7 +15,6 @@ $white-smoke:       #f2f7f8;
 $violet:            #41478a;
 $darkslategray :    #2e383e;
 $dodger-blue :      #3498db;
-
 
 $colors: (
   blue:             $blue,
@@ -39,7 +36,6 @@ $colors: (
   black:            #000000
 );
 
-
 $theme-colors: (
   primary:         #0090e7,
   secondary:       #e4eaec,
@@ -51,9 +47,6 @@ $theme-colors: (
   dark:            #0d0d0d
 );
 
-
-////////// COLOR SYSTEM //////////
-
 ////////// COLOR VARIABLES //////////
 $content-bg: #000000;
 $footer-bg: $content-bg;
@@ -61,12 +54,7 @@ $footer-color: color(dark);
 $border-color: #2c2e33;
 $circle-border: rgb(26, 57, 85); 
 
-////////// COLOR VARIABLES //////////
-
-
-
 ////////// SOCIAL COLORS //////////
-
 $social-colors: (
   twitter: #2caae1,
   facebook: #3b579d,
@@ -80,10 +68,7 @@ $social-colors: (
   reddit: #ff4500
 );
 
-////////// SOCIAL COLORS //////////
-
 ////////// FONTS//
-
 $type1: 'Rubik', sans-serif;
 
 $font-weight-light: 300;
@@ -95,14 +80,8 @@ $default-font-size: .875rem; // 14px as base font size
 $text-muted: #6c7293;
 $body-color: #ffffff;
 
-////////// FONT VARIABLES //////////
-
-
 ////////// CONTENT WRAPPER //////////
-
 $content-padding: 1.875rem 1.75rem;
-
-////////// CONTENT WRAPPER //////////
 
 ////////// SIDEBAR ////////
 $sidebar-width-lg: 244px;
@@ -144,10 +123,8 @@ $sidebar-icon-only-submenu-padding: 0 0 0 1.5rem;
 $icon-only-collapse-width: 190px;
 $icon-only-menu-bg: darken($sidebar-bg, 5%);
 
-///////// SIDEBAR ////////
 
 ///////// NAVBAR ////////
-
 $navbar-height: 70px;
 $navbar-bg: #191c24;
 $navbar-menu-color: #ffffff;
@@ -155,16 +132,12 @@ $navbar-font-size: .9375rem;
 $navbar-icon-font-size: 1.125rem;
 $navbar-box-shadow: 20px 19px 34px -15px rgba(0,0,0,0.5);
 
-///////// NAVBAR ////////
-
 ///////// CARD ////////
 $card-bg: #191c24;
 $card-description-color: #bfbfbf;
 $card-title-color: #ffffff;
-///////// CARD ////////
 
 ///////// BUTTONS ////////
-
 $button-fixed-width: 150px;
 $btn-padding-y: .375rem;
 $btn-padding-x: .75rem;
@@ -189,13 +162,7 @@ $btn-border-radius-xs: .1875rem;
 $btn-border-radius-sm: .1875rem;
 $btn-border-radius-lg: .1875rem;
 
-///////// BUTTONS ////////
-
-
-
 ////////// TOOLTIP VARIABLES //////////
-
-//default styles
 $tooltip-font-size:     .75rem;
 $tooltip-padding-y:     .4rem;
 $tooltip-padding-x:     .75rem;
@@ -208,9 +175,7 @@ $popover-arrow-color: $popover-bg;
 $popover-arrow-outer-color: $popover-border-color;
 $popover-header-bg: $popover-bg;
 
-
 /////////  FORMS /////////
-
 $input-bg: #2A3038;
 $input-border-radius: 2px;
 $input-border-color: $border-color;
@@ -221,7 +186,6 @@ $input-font-size: 0.875rem;
 $input-padding-y: 0.56rem;
 $input-padding-x: 0.75rem;
 $input-line-height: 1;
-
 
 $input-padding-y-xs:    .5rem;
 $input-padding-x-xs:    .75rem;
@@ -236,10 +200,7 @@ $input-height:          2.875rem;
 $input-height-sm:       2.575rem;
 $input-height-lg:       3.175rem;
 
-///////// FORMS /////////
-
 ////////  DROPDOWNS ///////
-
 $dropdown-bg: $card-bg;
 $dropdown-color: $body-color;
 $dropdown-item-hover-color: $white;
@@ -250,14 +211,7 @@ $dropdown-link-hover-bg: darken($card-bg, 3%);
 $dropdown-header-color: $body-color;
 $dropdown-menu-box-shadow: none;
 
-////////  DROPDOWNS ///////
-
-////////  PROGRESSBAR ///////
-$progress-bg: #2f323a;
-////////  PROGRESSBAR ///////
-
 //////// TABLES ////////
-
 $table-accent-bg: $content-bg;
 $table-hover-bg:  $content-bg;
 $table-cell-padding: .9375rem;
@@ -266,12 +220,7 @@ $table-border-color: $border-color;
 $table-inverse-bg: #2a2b32;
 $table-inverse-color: color(white);
 
-//////// TABLES ////////
-
-
-
 ////////// MEASUREMENT AND PROPERTY VARIABLES //////////
-
 $border-property: 1px solid $border-color;
 $card-spacing-y: 2.5rem;
 $card-padding-y: 1.75rem;
@@ -283,10 +232,8 @@ $action-transition-duration: 0.25s;
 $action-transition-timing-function: ease;
 $card-bg-varient: #fff;
 $border-width: 1px;
-////////// OTHER VARIABLES //////////
 
 ////////// MODALS VARIABLES //////////
-
 $modal-inner-padding:               0.9375rem;
 $modal-dialog-margin:               10px;
 $modal-dialog-margin-y-sm-up:       30px;
@@ -320,12 +267,6 @@ $modal-md:                          500px;
 $modal-sm:                          300px;
 $modal-transition:                  transform .4s ease;
 
-////////// MODALS VARIABLES //////////
-
-/////////  PAGINATION VARIABLES //////////
-$pagination-bg: $content-bg;
-/////////  PAGINATION VARIABLES //////////
-
 /////////  TABS VARIABLES //////////
 $nav-tabs-border-color:             $border-color;
 $nav-tabs-link-bg:                  $content-bg;
@@ -337,15 +278,6 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-colo
 $nav-pills-custom-bg:               #8489ab;
 $text-gray:gray;
 $circle-img-border: $white;
-////////   TABS VARIABLES /////////
-
-////////   CALENDAR  //////////////
-$fullcalendar-color: #a8b2b9;
-////////   CALENDAR  //////////////
-
-///////// SETTINGS PANEL ////////
-$settings-panel-width: 300px;
-///////// SETTINGS PANEL ////////
 
 ////////// Vendor file asset path //////////
 $mdi-font-path:        "~@mdi/font/fonts";
@@ -353,26 +285,6 @@ $fa-font-path : '~font-awesome/fonts/';
 $flag-icon-css-path : '~flag-icon-css/flags/';
 $simple-line-font-path : '~simple-line-icons/fonts/';
 
-
-///////// BOXED LAYOUT ///////
-$boxed-container-width: 1200px;
-$boxed-layout-bg: #c6c8ca;
-///////// BOXED LAYOUT ///////
-
-///////// TICKETS-TAB ///////
-$tab-head-bg: #0f1015;
-$accent-color: $white; 
-///////// TICKETS-TAB ///////
-
 ///////// LANDING PAGE ///////
 $landing-bg:#1a142dfa;
 $landing-bg-color: $content-bg;
-///////// LANDING PAGE ///////
-
-///////// CHATS ///////
-$chat-container-height:100%;
-$chat-bottom-btn: $input-bg;
-$form-focus-bg: $white;
-///////// CHATS ///////
-
-$bullet-line-list-shape-bg: color(white) !default;

@@ -1,16 +1,15 @@
-import React, { Component,Suspense, lazy } from 'react';
+import React, { Component,Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-const Dashboard = lazy(() => import('./pagesAdmin/Dashboard'));
-const Login = lazy(() => import('./pagesAdmin/Login'));
-const Profile = lazy(() => import('./pagesAdmin/Profile'));
-const PerminVideo = lazy(() => import('./pagesAdmin/PerminVideo'));
-const PerminWebsite = lazy(() => import('./pagesAdmin/PerminWebsite'));
-const PerminPublikasi = lazy(() => import('./pagesAdmin/PerminPublikasi'));
-const PerminDesain1 = lazy(() => import('./pagesAdmin/PerminDesain1'));
-const PerminDesain2 = lazy(() => import('./pagesAdmin/PerminDesain2'));
-
-const DashboardG = lazy(() => import('./pagesGeneral/Dashboard'));
+import Dashboard from  "./pagesAdmin/Dashboard";
+import Login from "./pagesAdmin/Login";
+import Profile from "./pagesAdmin/Profile";
+import PerminVideo from "./pagesAdmin/PerminVideo";
+import PerminWebsite from "./pagesAdmin/PerminWebsite";
+import PerminPublikasi from "./pagesAdmin/PerminPublikasi";
+import PerminDesain1 from "./pagesAdmin/PerminDesain1";
+import PerminDesain2 from "./pagesAdmin/PerminDesain2";
+import ViewPermintaan from "./pagesAdmin/ViewPermintaan";
 
 class AppRoutes extends Component {
   render () {
@@ -25,8 +24,7 @@ class AppRoutes extends Component {
           <Route path="/permintaan-publikasi" component={ PerminPublikasi } />
           <Route path="/permintaan-desain-1" component={ PerminDesain1 } />
           <Route path="/permintaan-desain-2" component={ PerminDesain2 } />
-
-          <Route path="/dashboard-general" component={ DashboardG } />
+          <Route path="/view-permintaan" component={ ViewPermintaan} />
           <Redirect to="/dashboard" />
         </Switch>
       </Suspense>

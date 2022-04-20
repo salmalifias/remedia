@@ -18,7 +18,9 @@
     "react-images": "^1.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "react-slick": "^0.29.0",
     "react-table": "^6.10.3",
+    "slick-carousel": "^1.8.1",
     "sweetalert2-react": "^0.8.3"
   },
   "scripts": {
