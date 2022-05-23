@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+
 
 class Navbar extends Component {
   toggleOffcanvas() {
@@ -10,6 +11,7 @@ class Navbar extends Component {
     document.querySelector(".right-sidebar").classList.toggle("open");
   }
   render() {
+    const{history}=this.props;
     return (
       <nav className="navbar p-0 fixed-top d-flex flex-row">
         <div className="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
@@ -35,8 +37,7 @@ class Navbar extends Component {
                 <h6 className="p-3 mb-0">Permintaan</h6>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="!#"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/permintaan-desain-1")}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -50,8 +51,7 @@ class Navbar extends Component {
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="!#"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/permintaan-video")}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -65,8 +65,7 @@ class Navbar extends Component {
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="!#"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/permintaan-website")}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -80,8 +79,7 @@ class Navbar extends Component {
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="!#"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/permintaan-publikasi")}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -108,7 +106,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/view-permintaan")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
@@ -127,7 +125,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/view-permintaan")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
@@ -146,7 +144,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/view-permintaan")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
@@ -187,8 +185,7 @@ class Navbar extends Component {
                 <h6 className="p-3 mb-0">Profil</h6>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="/profile"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/profile")}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -202,8 +199,7 @@ class Navbar extends Component {
                 </Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item
-                  href="!#"
-                  onClick={(evt) => evt.preventDefault()}
+                  onClick={() => history.push("/login")}
                   className="preview-item"
                 >
                   <div className="preview-thumbnail">
@@ -231,4 +227,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

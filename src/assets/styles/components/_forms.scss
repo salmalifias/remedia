@@ -3,6 +3,7 @@
 }
 .form-sort {
   width: 200px !important;
+  color: #ffffff !important;
   margin-right: 0.8rem !important;
   position: relative;
   display: inline-block;
@@ -62,7 +63,7 @@ select {
     padding: .4375rem .75rem;
     border: 0;
     outline: 1px solid #322f2f;
-    color: $input-placeholder-color;
+    color: $text-muted;
     &:focus {
       outline: 1px solid $border-color;
     }

@@ -11,7 +11,7 @@ export class Dashboard extends Component {
               <div className="card-body py-3 px-3 px-sm-4">
                 <div className="row align-items-center row">
                   <div className="col-xl-12 p-2 ">
-                    <form className="form-inline">
+                    <Form inline>
                       <Form.Group className="form-sort">
                         <select className="form-control" id="sortby">
                           <option>Status Permintaan</option>
@@ -51,7 +51,7 @@ export class Dashboard extends Component {
                       <button type="submit" className="btn btn-primary">
                         Cari
                       </button>
-                    </form>
+                    </Form>
                   </div>
                 </div>
               </div>

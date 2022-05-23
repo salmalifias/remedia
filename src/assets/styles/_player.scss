@@ -1,0 +1,13 @@
+  .player-wrapper {
+    width: auto; // Reset width
+    height: auto;
+    min-height: 200px !important;
+  }
+  .react-player {
+    position: relative;
+    width: auto !important;
+    height: 200px !important;
+  }
+  .react-player > div {
+    position: absolute;
+  }

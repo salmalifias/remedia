@@ -1,7 +1,19 @@
 import React, { Component } from "react";
 import { Form } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 export class PerminDesain2 extends Component {
+  showAlert = () => {
+    Swal.fire({
+        title: "Berhasil",
+        text: "Permintaan Masuk",
+        icon: "success",
+        confirmButtonText: "OK"
+      }).then(function () {
+        // Redirect the user
+        window.location.href = "/dashboard";
+      });
+  }
   render() {
     return (
       <div>
@@ -29,16 +41,16 @@ export class PerminDesain2 extends Component {
                     />
                   </Form.Group>
                   <Form.Group>
-                    <label>Foto Pada Slide</label>
+                    <label>Foto Pada Desain</label>
                     <div className="custom-file">
                       <Form.Control
-                        type="photo"
+                        type="file"
                         className="form-control visibility-hidden"
                         id="customFileLang"
                         lang="es"
                       />
                       <label
-                        className="custom-file-label"
+                        className="custom-file-label text-muted"
                         htmlFor="customFileLang"
                       >
                         Tambahkan Foto
@@ -63,16 +75,16 @@ export class PerminDesain2 extends Component {
                     />
                   </Form.Group>
                   <Form.Group>
-                    <label>Foto Pada Slide</label>
+                    <label>Foto Pada Desain</label>
                     <div className="custom-file">
                       <Form.Control
-                        type="photo"
+                        type="file"
                         className="form-control visibility-hidden"
                         id="customFileLang"
                         lang="es"
                       />
                       <label
-                        className="custom-file-label"
+                        className="custom-file-label text-muted"
                         htmlFor="customFileLang"
                       >
                         Tambahkan Foto
@@ -97,23 +109,23 @@ export class PerminDesain2 extends Component {
                     />
                   </Form.Group>
                   <Form.Group>
-                    <label>Foto Pada Slide</label>
+                    <label>Foto Pada Desain</label>
                     <div className="custom-file">
                       <Form.Control
-                        type="photo"
+                        type="file"
                         className="form-control visibility-hidden"
                         id="customFileLang"
                         lang="es"
                       />
                       <label
-                        className="custom-file-label"
+                        className="custom-file-label text-muted"
                         htmlFor="customFileLang"
                       >
                         Tambahkan Foto
                       </label>
                     </div>
                   </Form.Group>
-                  <button type="next" className="btn btn-primary mr-2">
+                  <button onClick={this.showAlert} type="button" className="btn btn-primary mr-2">
                     Tambah Permintaan
                   </button>
                 </form>

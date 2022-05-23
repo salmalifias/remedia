@@ -77,7 +77,7 @@ $font-weight-bold: 700;
 
 $default-font-size: .875rem; // 14px as base font size
 
-$text-muted: #6c7293;
+$text-muted: #8488a1;
 $body-color: #ffffff;
 
 ////////// CONTENT WRAPPER //////////
@@ -88,7 +88,7 @@ $sidebar-width-lg: 244px;
 $sidebar-width-mini: 185px;
 $sidebar-width-icon: 70px;
 
-$sidebar-bg: #191c24;
+$sidebar-bg: #191c20;
 $sidebar-menu-color: $text-muted;
 $sidebar-menu-active-bg: darken($sidebar-bg, 5%);
 $sidebar-menu-active-color: #ffffff;
@@ -126,14 +126,14 @@ $icon-only-menu-bg: darken($sidebar-bg, 5%);
 
 ///////// NAVBAR ////////
 $navbar-height: 70px;
-$navbar-bg: #191c24;
+$navbar-bg: #191c20;
 $navbar-menu-color: #ffffff;
 $navbar-font-size: .9375rem;
 $navbar-icon-font-size: 1.125rem;
 $navbar-box-shadow: 20px 19px 34px -15px rgba(0,0,0,0.5);
 
 ///////// CARD ////////
-$card-bg: #191c24;
+$card-bg: #191c20;
 $card-description-color: #bfbfbf;
 $card-title-color: #ffffff;
 

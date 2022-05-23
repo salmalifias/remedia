@@ -1,7 +1,19 @@
 import React, { Component } from "react";
 import { Form } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 export class PerminVideo extends Component {
+  showAlert = () => {
+    Swal.fire({
+        title: "Berhasil",
+        text: "Permintaan Masuk",
+        icon: "success",
+        confirmButtonText: "OK"
+      }).then(function () {
+        // Redirect the user
+        window.location.href = "/dashboard";
+      });
+  }
   render() {
     return (
       <div>
@@ -55,7 +67,7 @@ export class PerminVideo extends Component {
                         lang="es"
                       />
                       <label
-                        className="custom-file-label"
+                        className="custom-file-label text-muted"
                         htmlFor="customFileLang"
                       >
                         Tambahkan Foto
@@ -72,14 +84,14 @@ export class PerminVideo extends Component {
                         lang="es"
                       />
                       <label
-                        className="custom-file-label"
+                        className="custom-file-label text-muted"
                         htmlFor="customFileLang"
                       >
                         Tambahkan Foto
                       </label>
                     </div>
                   </Form.Group>
-                  <button type="submit" className="btn btn-primary mr-2">
+                  <button onClick={this.showAlert} type="button" className="btn btn-primary mr-2">
                     Tambah Permintaan
                   </button>
                 </form>

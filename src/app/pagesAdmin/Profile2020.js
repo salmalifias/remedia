@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Form } from "react-bootstrap";
 import Swal from "sweetalert2";
 
-export class Profile extends Component {
+export class Profile2020 extends Component {
   showAktivasi = () => {
     Swal.fire({
         title: "Berhasil",
@@ -73,10 +73,10 @@ export class Profile extends Component {
                   </div>
                   <div className="col-5 col-sm-7 col-xl-8 p-0">
                     <h4 className="mb-1 mb-sm-0">
-                      Departemen Media Kreatif 2021
+                      Departemen Media Kreatif 2020
                     </h4>
                     <p className="mb-0 font-weight-normal d-none d-sm-block">
-                      Activated!
+                      Not Activated
                     </p>
                   </div>
                   <div className="col-3 col-sm-2 col-xl-2 pl-0 text-center">
@@ -443,4 +443,4 @@ export class Profile extends Component {
   }
 }
 
-export default Profile;
+export default Profile2020;

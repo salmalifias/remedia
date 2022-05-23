@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export class PerminDesain1 extends Component {
   render() {
@@ -49,16 +50,18 @@ export class PerminDesain1 extends Component {
                         lang="es"
                       />
                       <label
-                        className="custom-file-label"
+                        className="custom-file-label text-muted"
                         htmlFor="customFileLang"
                       >
                         Tambahkan file (Word/PDF)
                       </label>
                     </div>
                   </Form.Group>
+                  <Link to="/permintaan-desain-2">
                   <button type="next" className="btn btn-primary mr-2">
                     Next
                   </button>
+                  </Link>
                 </form>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Dashboard from  "./pagesAdmin/Dashboard";
 import Login from "./pagesAdmin/Login";
 import Profile from "./pagesAdmin/Profile";
+import Profile2020 from "./pagesAdmin/Profile2020";
 import PerminVideo from "./pagesAdmin/PerminVideo";
 import PerminWebsite from "./pagesAdmin/PerminWebsite";
 import PerminPublikasi from "./pagesAdmin/PerminPublikasi";
@@ -19,6 +20,7 @@ class AppRoutes extends Component {
           <Route exact path="/dashboard" component={ Dashboard } />
           <Route path="/login" component={ Login } />
           <Route path="/profile" component={ Profile } />
+          <Route path="/profile2020" component={ Profile2020 } />
           <Route path="/permintaan-video" component={ PerminVideo } />
           <Route path="/permintaan-website" component={ PerminWebsite } />
           <Route path="/permintaan-publikasi" component={ PerminPublikasi } />

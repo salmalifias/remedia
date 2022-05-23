@@ -1,36 +1,40 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 class Sidebar extends Component {
+  showKabinet = () => {
+    Swal.fire({
+      title: 'Data Kabinet Baru',
+      html: `<input type="text" id="kabinet" class="swal2-input" placeholder="Nama Kabinet">
+      <input type="text" id="departemen" class="swal2-input" placeholder="Departemen Admin">
+      <input type="text" id="login" class="swal2-input" placeholder="Username">
+      <input type="password" id="password" class="swal2-input" placeholder="Password">`,
+      confirmButtonText: 'Tambah Kabinet',
+      focusConfirm: false,
+      preConfirm: () => {
+        const login = Swal.getPopup().querySelector('#login').value
+        const password = Swal.getPopup().querySelector('#password').value
+        if (!login || !password) {
+          Swal.showValidationMessage(`Please enter login and password`)
+        }
+        return { Login: login, Password: password }
+      }
+    }) 
+  }
+  
   state = {};
-
-  toggleMenuState(menuState) {
-    if (this.state[menuState]) {
-      this.setState({ [menuState]: false });
-    } else if (Object.keys(this.state).length === 0) {
-      this.setState({ [menuState]: true });
-    } else {
-      Object.keys(this.state).forEach((i) => {
-        this.setState({ [i]: false });
-      });
-      this.setState({ [menuState]: true });
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
-      this.onRouteChanged();
-    }
-  }
-
   onRouteChanged() {
     document.querySelector("#sidebar").classList.remove("active");
     Object.keys(this.state).forEach((i) => {
       this.setState({ [i]: false });
     });
 
-    const dropdownPaths = [{ path: "/apps", state: "appsMenuOpen" }];
+    const dropdownPaths = [
+      { path: "/dashboard", state: "DuaSatuOpen" },
+      { path: "/profile2020", state: "DuaPuluhOpen" }
+    ];
 
     dropdownPaths.forEach((obj) => {
       if (this.isPathActive(obj.path)) {
@@ -83,7 +87,7 @@ class Sidebar extends Component {
                       </div>
                     </div>
                     <div className="preview-item-content">
-                      <p className="preview-subject ellipsis mb-1 text-small">
+                      <p onClick={this.showKabinet} type="button" className="preview-subject ellipsis mb-1 text-small">
                         Tambah Kabinet
                       </p>
                     </div>
@@ -95,79 +99,17 @@ class Sidebar extends Component {
           <li className="nav-item nav-category">
             <span className="nav-link">Kabinet</span>
           </li>
-          <li
-            className={
-              this.isPathActive("/dashboard")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
+          <li className={this.isPathActive("/dashboard") ? "nav-item menu-items active" : "nav-item menu-items" }>
             <Link className="nav-link" to="/dashboard">
-              <span className="menu-icon">
-                <i className="mdi mdi-speedometer"></i>
-              </span>
+              <span className="menu-icon"><i className="mdi mdi-speedometer"></i></span>
               <span className="menu-title">2021</span>
             </Link>
           </li>
-          <li
-            className={
-              this.isPathActive("/login")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.appsMenuOpen ? "nav-link menu-expanded" : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("appsMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-speedometer"></i>
-              </span>
+          <li className={this.isPathActive('/profile2020') ? 'nav-item menu-items active' : 'nav-item menu-items' }>
+            <Link className="nav-link" to="/profile2020">
+              <span className="menu-icon"><i className="mdi mdi-speedometer"></i></span>
               <span className="menu-title">2020</span>
-            </div>
-          </li>
-          <li
-            className={
-              this.isPathActive("/basic-ui")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.appsMenuOpen ? "nav-link menu-expanded" : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("appsMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-speedometer"></i>
-              </span>
-              <span className="menu-title">2019</span>
-            </div>
-          </li>
-          <li
-            className={
-              this.isPathActive("/basic-ui")
-                ? "nav-item menu-items active"
-                : "nav-item menu-items"
-            }
-          >
-            <div
-              className={
-                this.state.appsMenuOpen ? "nav-link menu-expanded" : "nav-link"
-              }
-              onClick={() => this.toggleMenuState("appsMenuOpen")}
-              data-toggle="collapse"
-            >
-              <span className="menu-icon">
-                <i className="mdi mdi-speedometer"></i>
-              </span>
-              <span className="menu-title">2018</span>
-            </div>
+            </Link>
           </li>
         </ul>
       </nav>

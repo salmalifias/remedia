@@ -10,6 +10,7 @@ class App extends Component {
   componentDidMount() {
     this.onRouteChanged();
   }
+
   render () {
     let navbarComponent = !this.state.isFullPageLayout ? <Navbar/> : '';
     let sidebarComponent = !this.state.isFullPageLayout ? <Sidebar/> : '';
@@ -26,6 +27,12 @@ class App extends Component {
         </div>
        </div>
     );
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.onRouteChanged();
+    }
   }
 
   onRouteChanged() {
@@ -47,7 +54,6 @@ class App extends Component {
       }
     }
   }
-
 }
 
 export default (withRouter(App));
