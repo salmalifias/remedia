@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Form } from "react-bootstrap";
+import { Form, Dropdown } from "react-bootstrap";
 import Slider from "react-slick";
 import ReactPlayer from "react-player";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaanW extends Component {
+export class ViewPermintaanD extends Component {
   showDelete = () => {
     Swal.fire({
       title: "Apakah Anda Yakin?",
@@ -50,7 +50,7 @@ export class ViewPermintaanW extends Component {
                   RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
                 </h4>
                 <div className="d-flex flex-row justify-content-between">
-                  <h6 className="card-title">Permintaan Website</h6>
+                  <h6 className="card-title">Permintaan Desain</h6>
                   <div style={{ display: "flex", gap: "8px" }}>
                     <div
                       onClick={this.showDelete}
@@ -62,21 +62,12 @@ export class ViewPermintaanW extends Component {
                     />
                   </div>
                 </div>
+                <p className="card-description">
+                  <b>Halaman 1</b>
+                  <br />
+                  RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
+                </p>
                 <div style={{ display: "block" }}>
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
-                    height="110"
-                    alt="carousel-item"
-                  />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="110"
-                    height="110"
-                    alt="carousel-item"
-                  />
                   <img
                     style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
@@ -93,19 +84,48 @@ export class ViewPermintaanW extends Component {
                   />
                 </div>
                 <p className="card-description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  ac nunc ut magna porttitor euismod eu et nunc. Sed interdum
-                  quam vulputate quam scelerisque, vitae accumsan libero
-                  interdum. Praesent at sem at mauris posuere commodo. Nam arcu
-                  orci, tincidunt facilisis sem quis, ultricies sagittis tortor.
-                  Morbi rutrum, metus et faucibus fringilla, ligula nunc
-                  accumsan tortor, eget vestibulum dui metus pharetra tortor.
-                  Maecenas eget sapien pretium, dictum justo in, scelerisque
-                  lorem. Class aptent taciti sociosqu ad litora torquent per
-                  conubia nostra, per inceptos himenaeos. Curabitur sit amet sem
-                  dapibus, sagittis risus in, vulputate nibh. Phasellus gravida
-                  finibus est sed vehicula.
+                <Dropdown.Divider />
+                  <b>Halaman 2</b>
+                  <br />
+                  Post votum promissa memini cuius adeptione cupis; quem
+                  pollicitus est aversione aversi et fuga. Qui autem de re desit
+                  libido frustra miseri qui incurrit odium sui obiecti. Si ergo
+                  illa
                 </p>
+                <div style={{ display: "block" }}>
+                  <img
+                    style={{ margin: "4px" }}
+                    src={require("../../assets/images/dashboard/img_7.jpg")}
+                    width="110"
+                    height="110"
+                    alt="carousel-item"
+                  />
+                </div>
+                <p className="card-description">
+                <Dropdown.Divider />
+                  <b>Halaman 3</b>
+                  <br />
+                  Post votum promissa memini cuius adeptione cupis; quem
+                  pollicitus est aversione aversi et fuga. Qui autem de re desit
+                  libido frustra miseri qui incurrit odium sui obiecti. Si ergo
+                  illa tantum fastidium compesce contra naturalem usum habili,
+                  quem habetis vestra potestate, non aliud quam aversantur
+                  incurrere. Sed si ipse aversaris, ad languorem: et mors,
+                  paupertas et tu miseros fore. Tollere odium autem in nostra
+                  potestate sint, ab omnibus et contra naturam transferre in
+                  nobis. Sed interim toto desiderio supprimunt: si vis aliqua
+                  quae in manu tua tibi necesse confundentur et quae, quod
+                  laudabile esset, nihil tamen possides.
+                </p>
+                <div style={{ display: "block" }}>
+                  <img
+                    style={{ margin: "4px" }}
+                    src={require("../../assets/images/dashboard/img_7.jpg")}
+                    width="180"
+                    height="110"
+                    alt="carousel-item"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -306,4 +326,4 @@ export class ViewPermintaanW extends Component {
   }
 }
 
-export default ViewPermintaanW;
+export default ViewPermintaanD;

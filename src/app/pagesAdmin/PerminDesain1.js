@@ -58,9 +58,9 @@ export class PerminDesain1 extends Component {
                     </div>
                   </Form.Group>
                   <Link to="/permintaan-desain-2">
-                  <button type="next" className="btn btn-primary mr-2">
-                    Next
-                  </button>
+                    <button type="next" className="btn btn-primary mr-2">
+                      Next
+                    </button>
                   </Link>
                 </form>
               </div>

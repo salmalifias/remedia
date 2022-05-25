@@ -5,57 +5,57 @@ import Swal from "sweetalert2";
 export class Profile2020 extends Component {
   showAktivasi = () => {
     Swal.fire({
-        title: "Berhasil",
-        text: "Kabinet Diaktivasi",
-        icon: "success",
-        confirmButtonText: "OK"
-      });
-  }
+      title: "Berhasil",
+      text: "Kabinet Diaktivasi",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+  };
   showData = () => {
     Swal.fire({
-        title: "Berhasil",
-        text: "Data Telah Diubah",
-        icon: "success",
-        confirmButtonText: "OK"
-      });
-  }
+      title: "Berhasil",
+      text: "Data Telah Diubah",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+  };
   showBidang = () => {
     Swal.fire({
-      title: 'Data Bidang',
+      title: "Data Bidang",
       html: `<input type="text" id="bidang" class="swal2-input" placeholder="Nama Bidang">
       <input type="text" id="departbir" class="swal2-input" placeholder="Departemen dan Biro">
       <input type="text" id="login" class="swal2-input" placeholder="Username">
       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
-      confirmButtonText: 'Tambah Bidang',
+      confirmButtonText: "Tambah Bidang",
       focusConfirm: false,
       preConfirm: () => {
-        const login = Swal.getPopup().querySelector('#login').value
-        const password = Swal.getPopup().querySelector('#password').value
+        const login = Swal.getPopup().querySelector("#login").value;
+        const password = Swal.getPopup().querySelector("#password").value;
         if (!login || !password) {
-          Swal.showValidationMessage(`Please enter login and password`)
+          Swal.showValidationMessage(`Please enter login and password`);
         }
-        return { Login: login, Password: password }
-      }
-    })
-  }
+        return { Login: login, Password: password };
+      },
+    });
+  };
   showDeptBir = () => {
     Swal.fire({
-      title: 'Data Departemen/Biro',
+      title: "Data Departemen/Biro",
       html: `<input type="text" id="bidang" class="swal2-input" placeholder="Nama Dept/Biro">
       <input type="text" id="login" class="swal2-input" placeholder="Username">
       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
-      confirmButtonText: 'Tambah Departemen',
+      confirmButtonText: "Tambah Departemen",
       focusConfirm: false,
       preConfirm: () => {
-        const login = Swal.getPopup().querySelector('#login').value
-        const password = Swal.getPopup().querySelector('#password').value
+        const login = Swal.getPopup().querySelector("#login").value;
+        const password = Swal.getPopup().querySelector("#password").value;
         if (!login || !password) {
-          Swal.showValidationMessage(`Please enter login and password`)
+          Swal.showValidationMessage(`Please enter login and password`);
         }
-        return { Login: login, Password: password }
-      }
-    })
-  }
+        return { Login: login, Password: password };
+      },
+    });
+  };
   render() {
     return (
       <div>
@@ -80,7 +80,11 @@ export class Profile2020 extends Component {
                     </p>
                   </div>
                   <div className="col-3 col-sm-2 col-xl-2 pl-0 text-center">
-                    <button onClick={this.showAktivasi} type="button" className="btn btn-outline-light btn-rounded activate-btn">
+                    <button
+                      onClick={this.showAktivasi}
+                      type="button"
+                      className="btn btn-outline-light btn-rounded activate-btn"
+                    >
                       Aktivasi
                     </button>
                   </div>
@@ -165,7 +169,13 @@ export class Profile2020 extends Component {
               <div className="card-body">
                 <div className="d-flex flex-row justify-content-between">
                   <h4 className="card-title mb-1">Data Bidang</h4>
-                  <p onClick={this.showBidang} type="button" className="text-muted mb-1">Tambah Bidang</p>
+                  <p
+                    onClick={this.showBidang}
+                    type="button"
+                    className="text-muted mb-1"
+                  >
+                    Tambah Bidang
+                  </p>
                 </div>
                 <div className="row">
                   <div className="col-12">
@@ -342,7 +352,11 @@ export class Profile2020 extends Component {
                       placeholder="Password"
                     />
                   </Form.Group>
-                  <button  onClick={this.showData} type="button" className="btn btn-primary mr-2">
+                  <button
+                    onClick={this.showData}
+                    type="button"
+                    className="btn btn-primary mr-2"
+                  >
                     Ubah
                   </button>
                 </form>
@@ -356,7 +370,13 @@ export class Profile2020 extends Component {
               <div className="card-body">
                 <div className="d-flex flex-row justify-content-between">
                   <h4 className="card-title mb-1">Data Departemen dan Biro</h4>
-                  <p onClick={this.showDeptBir} type="button" className="text-muted mb-1">Tambah Dept/Biro</p>
+                  <p
+                    onClick={this.showDeptBir}
+                    type="button"
+                    className="text-muted mb-1"
+                  >
+                    Tambah Dept/Biro
+                  </p>
                 </div>
                 <div className="table-responsive">
                   <table className="table">

@@ -46,7 +46,7 @@
         img {
           width: calc(#{$sidebar-width-icon} - 50px );
           max-width: 100%;
-          height: 28px;
+          height: auto;
           margin: auto;
         }
       }

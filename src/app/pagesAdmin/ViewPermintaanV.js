@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaanW extends Component {
+export class ViewPermintaanV extends Component {
   showDelete = () => {
     Swal.fire({
       title: "Apakah Anda Yakin?",
@@ -50,7 +50,7 @@ export class ViewPermintaanW extends Component {
                   RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
                 </h4>
                 <div className="d-flex flex-row justify-content-between">
-                  <h6 className="card-title">Permintaan Website</h6>
+                  <h6 className="card-title">Permintaan Videografi</h6>
                   <div style={{ display: "flex", gap: "8px" }}>
                     <div
                       onClick={this.showDelete}
@@ -62,6 +62,11 @@ export class ViewPermintaanW extends Component {
                     />
                   </div>
                 </div>
+                <p className="card-description">
+                  <b>Referensi : </b>www.youtube.com
+                  <br />
+                  <b>Durasi : </b>www.youtube.com
+                </p>
                 <div style={{ display: "block" }}>
                   <img
                     style={{ margin: "4px" }}
@@ -84,15 +89,11 @@ export class ViewPermintaanW extends Component {
                     height="110"
                     alt="carousel-item"
                   />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
-                    height="110"
-                    alt="carousel-item"
-                  />
                 </div>
                 <p className="card-description">
+                  <br />
+                  <b>Detail</b>
+                  <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   ac nunc ut magna porttitor euismod eu et nunc. Sed interdum
                   quam vulputate quam scelerisque, vitae accumsan libero
@@ -105,6 +106,17 @@ export class ViewPermintaanW extends Component {
                   conubia nostra, per inceptos himenaeos. Curabitur sit amet sem
                   dapibus, sagittis risus in, vulputate nibh. Phasellus gravida
                   finibus est sed vehicula.
+                  <br />
+                  <br />
+                  <b>Slide Cover/thumbnail</b>
+                  <br />
+                  <img
+                    style={{ margin: "4px" }}
+                    src={require("../../assets/images/dashboard/img_7.jpg")}
+                    width="180"
+                    height="110"
+                    alt="carousel-item"
+                  />
                 </p>
               </div>
             </div>
@@ -306,4 +318,4 @@ export class ViewPermintaanW extends Component {
   }
 }
 
-export default ViewPermintaanW;
+export default ViewPermintaanV;

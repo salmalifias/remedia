@@ -11,6 +11,9 @@ import PerminPublikasi from "./pagesAdmin/PerminPublikasi";
 import PerminDesain1 from "./pagesAdmin/PerminDesain1";
 import PerminDesain2 from "./pagesAdmin/PerminDesain2";
 import ViewPermintaanW from "./pagesAdmin/ViewPermintaanW";
+import ViewPermintaanV from "./pagesAdmin/ViewPermintaanV";
+import ViewPermintaanP from "./pagesAdmin/ViewPermintaanP";
+import ViewPermintaanD from "./pagesAdmin/ViewPermintaanD";
 
 class AppRoutes extends Component {
   render () {
@@ -27,6 +30,9 @@ class AppRoutes extends Component {
           <Route path="/permintaan-desain-1" component={ PerminDesain1 } />
           <Route path="/permintaan-desain-2" component={ PerminDesain2 } />
           <Route path="/view-permintaan-web" component={ ViewPermintaanW } />
+          <Route path="/view-permintaan-video" component={ ViewPermintaanV } />
+          <Route path="/view-permintaan-publikasi" component={ ViewPermintaanP } />
+          <Route path="/view-permintaan-desain" component={ ViewPermintaanD } />
           <Redirect to="/dashboard" />
         </Switch>
       </Suspense>

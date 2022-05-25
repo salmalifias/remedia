@@ -5,15 +5,15 @@ import Swal from "sweetalert2";
 export class PerminWebsite extends Component {
   showAlert = () => {
     Swal.fire({
-        title: "Berhasil",
-        text: "Permintaan Masuk",
-        icon: "success",
-        confirmButtonText: "OK"
-      }).then(function () {
-        // Redirect the user
-        window.location.href = "/dashboard";
-      });
-  }
+      title: "Berhasil",
+      text: "Permintaan Masuk",
+      icon: "success",
+      confirmButtonText: "OK",
+    }).then(function () {
+      // Redirect the user
+      window.location.href = "/dashboard";
+    });
+  };
   render() {
     return (
       <div>
@@ -83,7 +83,11 @@ export class PerminWebsite extends Component {
                       </label>
                     </div>
                   </Form.Group>
-                  <button onClick={this.showAlert} type="button" className="btn btn-primary mr-2">
+                  <button
+                    onClick={this.showAlert}
+                    type="button"
+                    className="btn btn-primary mr-2"
+                  >
                     Tambah Permintaan
                   </button>
                 </form>

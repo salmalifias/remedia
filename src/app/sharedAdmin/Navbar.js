@@ -19,7 +19,7 @@ class Navbar extends Component {
             <img src={require("../../assets/images/logoo.png")} alt="logo" />
           </Link>
         </div>
-        <div className="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+        <div className="justify-content-end navbar-menu-wrapper flex-grow d-flex align-items-stretch">
           <button
             className="navbar-toggler align-self-center"
             type="button"
@@ -28,9 +28,9 @@ class Navbar extends Component {
             <span className="mdi mdi-menu"></span>
           </button>
           <ul className="navbar-nav navbar-nav-right">
-            <Dropdown alignRight as="li" className="nav-item d-none d-lg-block">
+            <Dropdown alignRight as="li" className="nav-item d-lg-block">
               <Dropdown.Toggle className="nav-link btn btn-success create-new-button no-caret">
-                + Tambah Permintaan
+                + Permintaan
               </Dropdown.Toggle>
 
               <Dropdown.Menu className="navbar-dropdown preview-list create-new-dropdown-menu">
@@ -106,7 +106,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={() => history.push("/view-permintaan-web")}
+                  onClick={() => history.push("/view-permintaan-desain")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
@@ -129,7 +129,7 @@ class Navbar extends Component {
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-settings text-danger"></i>
+                      <i className="mdi mdi-calendar text-danger"></i>
                     </div>
                   </div>
                   <div className="preview-item-content">
@@ -144,11 +144,11 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={() => history.push("/view-permintaan-web")}
+                  onClick={() => history.push("/view-permintaan-publikasi")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-link-variant text-warning"></i>
+                      <i className="mdi mdi-calendar text-warning"></i>
                     </div>
                   </div>
                   <div className="preview-item-content">

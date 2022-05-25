@@ -19,7 +19,6 @@ class Sidebar extends Component {
         if (!login || !password) {
           Swal.showValidationMessage(`Please enter login and password`)
         }
-        return { Login: login, Password: password }
       }
     }) 
   }

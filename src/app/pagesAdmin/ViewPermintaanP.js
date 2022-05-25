@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaanW extends Component {
+export class ViewPermintaanP extends Component {
   showDelete = () => {
     Swal.fire({
       title: "Apakah Anda Yakin?",
@@ -49,8 +49,13 @@ export class ViewPermintaanW extends Component {
                 <h4 className="card-title">
                   RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
                 </h4>
+                <p className="card-description">
+                  Departemen Seni Budaya dan Olahraga | Bidang Minat dan Bakat{" "}
+                  <br />
+                  Publikasi Tanggal 29 Februari 2021
+                </p>
                 <div className="d-flex flex-row justify-content-between">
-                  <h6 className="card-title">Permintaan Website</h6>
+                  <h6 className="card-title">Permintaan Publikasi</h6>
                   <div style={{ display: "flex", gap: "8px" }}>
                     <div
                       onClick={this.showDelete}
@@ -306,4 +311,4 @@ export class ViewPermintaanW extends Component {
   }
 }
 
-export default ViewPermintaanW;
+export default ViewPermintaanP;
