@@ -91,40 +91,6 @@ export class PerminDesain2 extends Component {
                       </label>
                     </div>
                   </Form.Group>
-                  <p className="card-description">Slide 3</p>
-                  <Form.Group>
-                    <label>Judul Slide</label>
-                    <Form.Control
-                      type="text"
-                      id="judul"
-                      placeholder="Judul Permintaan"
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Isi Slide</label>
-                    <Form.Control
-                      type="text"
-                      id="jenis"
-                      placeholder="Jenis Desain (Postingan/Sertifikat/dll)"
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Foto Pada Desain</label>
-                    <div className="custom-file">
-                      <Form.Control
-                        type="file"
-                        className="form-control visibility-hidden"
-                        id="customFileLang"
-                        lang="es"
-                      />
-                      <label
-                        className="custom-file-label text-muted"
-                        htmlFor="customFileLang"
-                      >
-                        Tambahkan Foto
-                      </label>
-                    </div>
-                  </Form.Group>
                   <button onClick={this.showAlert} type="button" className="btn btn-primary mr-2">
                     Tambah Permintaan
                   </button>

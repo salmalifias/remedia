@@ -10,7 +10,7 @@ import PerminWebsite from "./pagesAdmin/PerminWebsite";
 import PerminPublikasi from "./pagesAdmin/PerminPublikasi";
 import PerminDesain1 from "./pagesAdmin/PerminDesain1";
 import PerminDesain2 from "./pagesAdmin/PerminDesain2";
-import ViewPermintaan from "./pagesAdmin/ViewPermintaan";
+import ViewPermintaanW from "./pagesAdmin/ViewPermintaanW";
 
 class AppRoutes extends Component {
   render () {
@@ -26,7 +26,7 @@ class AppRoutes extends Component {
           <Route path="/permintaan-publikasi" component={ PerminPublikasi } />
           <Route path="/permintaan-desain-1" component={ PerminDesain1 } />
           <Route path="/permintaan-desain-2" component={ PerminDesain2 } />
-          <Route path="/view-permintaan" component={ ViewPermintaan} />
+          <Route path="/view-permintaan-web" component={ ViewPermintaanW } />
           <Redirect to="/dashboard" />
         </Switch>
       </Suspense>

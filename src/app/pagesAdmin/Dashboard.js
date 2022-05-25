@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form } from "react-bootstrap";
+import { Row, Form } from "react-bootstrap";
 
 export class Dashboard extends Component {
   render() {
@@ -8,11 +8,14 @@ export class Dashboard extends Component {
         <div className="row">
           <div className="col-lg-12 grid-margin stretch-card">
             <div className="card">
-              <div className="card-body py-3 px-3 px-sm-4">
-                <div className="row align-items-center row">
-                  <div className="col-xl-12 p-2 ">
-                    <Form inline>
-                      <Form.Group className="form-sort">
+              
+              <div className="card-body">
+              <h4 className="card-title">Cari Permintaan</h4>
+                {/* <div className="row align-items-center row"> */}
+                  {/* <div className="col-xl-12 p-2 "> */}
+                    <Form className="ml-2">
+                    <Row>
+                      <Form.Group className="form-sort ">
                         <select className="form-control" id="sortby">
                           <option>Status Permintaan</option>
                           <option>Permintaan diproses</option>
@@ -48,12 +51,13 @@ export class Dashboard extends Component {
                           <option>Miba</option>
                         </select>
                       </Form.Group>
-                      <button type="submit" className="btn btn-primary">
+                      <button type="search" className="btn btn-primary" style={{ height: "36px", width: "100px" }}>
                         Cari
                       </button>
+                      </Row>
                     </Form>
-                  </div>
-                </div>
+                  {/* </div> */}
+                {/* </div> */}
               </div>
             </div>
           </div>

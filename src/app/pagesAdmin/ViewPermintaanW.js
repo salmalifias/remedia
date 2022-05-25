@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaan extends Component {
+export class ViewPermintaanW extends Component {
   showDelete = () => {
     Swal.fire({
       title: 'Apakah Anda Yakin?',
@@ -21,7 +21,18 @@ export class ViewPermintaan extends Component {
     Swal.fire({
       title: 'Download bahan permintaan',
       text: 'Permintaan akan didownload',
-      icon: 'warning',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33', 
+      confirmButtonText: 'Yes'
+   });
+  }
+  showAdd = () => {
+    Swal.fire({
+      title: 'Berhasil',
+      text: 'Hasil editing telah ditambahkan',
+      icon: 'success',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33', 
@@ -50,29 +61,29 @@ export class ViewPermintaan extends Component {
                     <div onClick={this.showDownload} className="mdi mdi-download" />
                   </div>
                 </div>
-                <div style={{ display: "block", gap: "8px" }}>
-                  <img
+                <div style={{ display: "block" }}>
+                  <img style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="150"
-                    height="150"
+                    width="180"
+                    height="110"
                     alt="carousel-item"
                   />
-                  <img
+                  <img style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="150"
-                    height="150"
+                    width="110"
+                    height="110"
                     alt="carousel-item"
                   />
-                  <img
+                  <img style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="150"
-                    height="150"
+                    width="110"
+                    height="110"
                     alt="carousel-item"
                   />
-                  <img
+                  <img style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="150"
-                    height="150"
+                    width="180"
+                    height="110"
                     alt="carousel-item"
                   />
                 </div>
@@ -132,7 +143,7 @@ export class ViewPermintaan extends Component {
                       placeholder="Username"
                     />
                   </Form.Group>
-                  <button type="submit" className="btn btn-primary mr-2">
+                  <button type="button" onClick={this.showAdd} className="btn btn-primary mr-2">
                     Add
                   </button>
                   <button className="btn btn-dark">Cancel</button>
@@ -274,4 +285,4 @@ export class ViewPermintaan extends Component {
   }
 }
 
-export default ViewPermintaan;
+export default ViewPermintaanW;

@@ -106,7 +106,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={() => history.push("/view-permintaan")}
+                  onClick={() => history.push("/view-permintaan-web")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
@@ -125,7 +125,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={() => history.push("/view-permintaan")}
+                  onClick={() => history.push("/view-permintaan-web")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
@@ -144,7 +144,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={() => history.push("/view-permintaan")}
+                  onClick={() => history.push("/view-permintaan-web")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">

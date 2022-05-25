@@ -16,8 +16,8 @@ export class Login extends Component {
                     alt="logo"
                   />
                 </div>
-                <h4>Hello! let's get started</h4>
-                <h6 className="font-weight-light">Sign in to continue.</h6>
+                <h4>Selamat Datang di Remedia,</h4>
+                <h6 className="font-weight-light">Ajukan Permintaanmu!</h6>
                 <Form className="pt-3">
                   <Form.Group className="d-flex">
                     <Form.Control
@@ -51,13 +51,6 @@ export class Login extends Component {
                         Keep me signed in
                       </label>
                     </div>
-                    <a
-                      href="!#"
-                      onClick={(event) => event.preventDefault()}
-                      className="auth-link text-muted"
-                    >
-                      Forgot password?
-                    </a>
                   </div>
                 </Form>
               </div>
