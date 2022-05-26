@@ -15,6 +15,7 @@ export class ViewPermintaanP extends Component {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
+      background: '#191c20'
     });
   };
   showDownload = () => {
@@ -26,6 +27,7 @@ export class ViewPermintaanP extends Component {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
+      background: '#191c20'
     });
   };
   showAdd = () => {
@@ -37,6 +39,7 @@ export class ViewPermintaanP extends Component {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
+      background: '#191c20'
     });
   };
   render() {

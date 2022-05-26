@@ -9,6 +9,7 @@ export class Profile extends Component {
       text: "Kabinet Diaktivasi",
       icon: "success",
       confirmButtonText: "OK",
+      background: '#191c20'
     });
   };
   showData = () => {
@@ -17,6 +18,7 @@ export class Profile extends Component {
       text: "Data Telah Diubah",
       icon: "success",
       confirmButtonText: "OK",
+      background: '#191c20'
     });
   };
   showBidang = () => {
@@ -28,6 +30,7 @@ export class Profile extends Component {
       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
       confirmButtonText: "Tambah Bidang",
       focusConfirm: false,
+      background: '#191c20',
       preConfirm: () => {
         const login = Swal.getPopup().querySelector("#login").value;
         const password = Swal.getPopup().querySelector("#password").value;
@@ -41,11 +44,12 @@ export class Profile extends Component {
   showDeptBir = () => {
     Swal.fire({
       title: "Data Departemen/Biro",
-      html: `<input type="text" id="bidang" class="swal2-input" placeholder="Nama Dept/Biro">
+      html: `<input type="text" id="deptbir" class="swal2-input" placeholder="Nama Dept/Biro">
       <input type="text" id="login" class="swal2-input" placeholder="Username">
       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
       confirmButtonText: "Tambah Departemen",
       focusConfirm: false,
+      background: '#191c20',
       preConfirm: () => {
         const login = Swal.getPopup().querySelector("#login").value;
         const password = Swal.getPopup().querySelector("#password").value;
@@ -63,6 +67,7 @@ export class Profile extends Component {
       <input type="password" id="password" class="swal2-input" placeholder="Password Baru">`,
       confirmButtonText: "Ubah",
       focusConfirm: false,
+      background: '#191c20',
       preConfirm: () => {
         const login = Swal.getPopup().querySelector("#login").value;
         const password = Swal.getPopup().querySelector("#password").value;

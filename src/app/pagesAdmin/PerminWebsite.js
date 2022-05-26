@@ -9,6 +9,7 @@ export class PerminWebsite extends Component {
       text: "Permintaan Masuk",
       icon: "success",
       confirmButtonText: "OK",
+      background: '#191c20'
     }).then(function () {
       // Redirect the user
       window.location.href = "/dashboard";

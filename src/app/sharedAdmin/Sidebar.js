@@ -13,6 +13,7 @@ class Sidebar extends Component {
       <input type="password" id="password" class="swal2-input" placeholder="Password">`,
       confirmButtonText: 'Tambah Kabinet',
       focusConfirm: false,
+      background: '#191c20',
       preConfirm: () => {
         const login = Swal.getPopup().querySelector('#login').value
         const password = Swal.getPopup().querySelector('#password').value
