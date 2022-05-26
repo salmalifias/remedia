@@ -9,12 +9,33 @@ export class PerminDesain2 extends Component {
       text: "Permintaan Masuk",
       icon: "success",
       confirmButtonText: "OK",
-      background: '#191c20'
+      background: "#191c20",
     }).then(function () {
       // Redirect the user
       window.location.href = "/dashboard";
     });
   };
+  constructor(props) {
+    super(props);
+    this.state = {
+      formValues: [{ name: "", email: "" }],
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(i, e) {
+    let formValues = this.state.formValues;
+    formValues[i][e.target.name] = e.target.value;
+    this.setState({ formValues });
+  }
+  addFormFields() {
+    this.setState({
+      formValues: [...this.state.formValues, { name: "", email: "" }],
+    });
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    alert(JSON.stringify(this.state.formValues));
+  }
   render() {
     return (
       <div>
@@ -24,81 +45,67 @@ export class PerminDesain2 extends Component {
               <div className="card-body">
                 <h4 className="card-title">Permintaan Desain</h4>
                 <form className="forms-sample">
-                  <p className="card-description">Slide 1</p>
-                  <Form.Group>
-                    <label>Judul Slide</label>
-                    <Form.Control
-                      type="text"
-                      id="judul"
-                      placeholder="Judul Permintaan"
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Isi Slide</label>
-                    <Form.Control
-                      type="text"
-                      id="jenis"
-                      placeholder="Jenis Desain (Postingan/Sertifikat/dll)"
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Foto Pada Desain</label>
-                    <div className="custom-file">
-                      <Form.Control
-                        type="file"
-                        className="form-control visibility-hidden"
-                        id="customFileLang"
-                        lang="es"
-                      />
-                      <label
-                        className="custom-file-label text-muted"
-                        htmlFor="customFileLang"
-                      >
-                        Tambahkan Foto
-                      </label>
+                  {this.state.formValues.map((element, index) => (
+                    <div key={index}>
+                      <p className="card-description">Slide</p>
+                      <Form.Group>
+                        <label>Judul Slide</label>
+                        <Form.Control
+                          type="text"
+                          name="judul"
+                          placeholder="Judul Permintaan"
+                          value={element.judul || ""}
+                          onChange={(e) => this.handleChange(index, e)}
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <label>Isi Slide</label>
+                        <Form.Control
+                          type="text"
+                          name="isi"
+                          value={element.isi || ""}
+                          onChange={(e) => this.handleChange(index, e)}
+                          placeholder="Jenis Desain (Postingan/Sertifikat/dll)"
+                        />
+                      </Form.Group>
+                      <Form.Group>
+                        <label>Foto Pada Desain</label>
+                        <div className="custom-file">
+                          <Form.Control
+                            type="file"
+                            className="form-control visibility-hidden"
+                            name="foto"
+                            lang="es"
+                            value={element.foto || ""}
+                            onChange={(e) => this.handleChange(index, e)}
+                          />
+                          <label
+                            className="custom-file-label text-muted"
+                            htmlFor="customFileLang"
+                          >
+                            Tambahkan Foto
+                          </label>
+                        </div>
+                      </Form.Group>
                     </div>
-                  </Form.Group>
-                  <p className="card-description">Slide 2</p>
-                  <Form.Group>
-                    <label>Judul Slide</label>
-                    <Form.Control
-                      type="text"
-                      id="judul"
-                      placeholder="Judul Permintaan"
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Isi Slide</label>
-                    <Form.Control
-                      type="text"
-                      id="jenis"
-                      placeholder="Jenis Desain (Postingan/Sertifikat/dll)"
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Foto Pada Desain</label>
-                    <div className="custom-file">
-                      <Form.Control
-                        type="file"
-                        className="form-control visibility-hidden"
-                        id="customFileLang"
-                        lang="es"
-                      />
-                      <label
-                        className="custom-file-label text-muted"
-                        htmlFor="customFileLang"
-                      >
-                        Tambahkan Foto
-                      </label>
-                    </div>
-                  </Form.Group>
-                  <button
-                    onClick={this.showAlert}
-                    type="button"
-                    className="btn btn-primary mr-2"
-                  >
-                    Tambah Permintaan
-                  </button>
+                  ))}
+                  <div className="d-flex flex-row justify-content-between">
+                    <button
+                      onClick={this.showAlert}
+                      type="button"
+                      className="btn btn-primary mr-2"
+                    >
+                      Tambah Permintaan
+                    </button>
+                    <button
+                      // onClick={this.showAlert}
+                      onClick={() => this.addFormFields()}
+                      type="button"
+                      className="btn btn-primary mr-2"
+                    >
+                      +
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
