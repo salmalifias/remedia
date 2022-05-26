@@ -173,6 +173,7 @@ export class Profile2020 extends Component {
                     onClick={this.showBidang}
                     type="button"
                     className="text-muted mb-1"
+                    style={{textDecorationLine: 'underline'}}
                   >
                     Tambah Bidang
                   </p>
@@ -374,6 +375,7 @@ export class Profile2020 extends Component {
                     onClick={this.showDeptBir}
                     type="button"
                     className="text-muted mb-1"
+                    style={{textDecorationLine: 'underline'}}
                   >
                     Tambah Dept/Biro
                   </p>
@@ -401,7 +403,7 @@ export class Profile2020 extends Component {
                         <td> Sekretariat Umum </td>
                         <td> emesdeem </td>
                         <td> msdm123 </td>
-                        <td> Edit </td>
+                        <td onClick={this.showEdit} style={{textDecorationLine: 'underline'}}> Edit </td>
                       </tr>
                       <tr>
                         <td>
@@ -413,7 +415,7 @@ export class Profile2020 extends Component {
                         <td> Sekretariat Umum </td>
                         <td> emesdeem </td>
                         <td> msdm123 </td>
-                        <td> Edit </td>
+                        <td onClick={this.showEdit} style={{textDecorationLine: 'underline'}}> Edit </td>
                       </tr>
                       <tr>
                         <td>
@@ -425,7 +427,7 @@ export class Profile2020 extends Component {
                         <td> Sekretariat Umum </td>
                         <td> emesdeem </td>
                         <td> msdm123 </td>
-                        <td> Edit </td>
+                        <td onClick={this.showEdit} style={{textDecorationLine: 'underline'}}> Edit </td>
                       </tr>
                       <tr>
                         <td>
@@ -437,7 +439,7 @@ export class Profile2020 extends Component {
                         <td> Sekretariat Umum </td>
                         <td> emesdeem </td>
                         <td> msdm123 </td>
-                        <td> Edit </td>
+                        <td onClick={this.showEdit} style={{textDecorationLine: 'underline'}}> Edit </td>
                       </tr>
                       <tr>
                         <td>
@@ -449,7 +451,7 @@ export class Profile2020 extends Component {
                         <td> Sekretariat Umum </td>
                         <td> emesdeem </td>
                         <td> msdm123 </td>
-                        <td> Edit </td>
+                        <td onClick={this.showEdit} style={{textDecorationLine: 'underline'}}> Edit </td>
                       </tr>
                     </tbody>
                   </table>
