@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Form } from "react-bootstrap";
-import Slider from "react-slick";
-import ReactPlayer from "react-player";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
@@ -40,6 +38,9 @@ export class ViewPermintaanP extends Component {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
       background: '#191c20'
+    }).then(function () {
+      // Redirect the user
+      window.location.href = "/view-permintaan-publikasi2";
     });
   };
   render() {
@@ -126,9 +127,9 @@ export class ViewPermintaanP extends Component {
                 <form className="forms-sample">
                   <Form.Group>
                     <select className="form-control" id="sortby">
-                      <option>Terima/Tolak</option>
-                      <option>Terima</option>
-                      <option>Tolak</option>
+                      <option style={{color:"#c3c5cf"}}>Terima/Tolak</option>
+                      <option style={{color:"#c3c5cf"}}>Terima</option>
+                      <option style={{color:"#c3c5cf"}}>Tolak</option>
                     </select>
                   </Form.Group>
                   <Form.Group>
@@ -165,146 +166,6 @@ export class ViewPermintaanP extends Component {
                   </button>
                   <button className="btn btn-dark">Cancel</button>
                 </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-            <div className="card">
-              <div className="card-body">
-                <h4 className="card-title">Desain</h4>
-                <Slider className="portfolio-slider" {...this.sliderSettings}>
-                  <div className="item">
-                    <img
-                      src={require("../../assets/images/dashboard/img_7.jpg")}
-                      alt="carousel-item"
-                    />
-                  </div>
-                  <div className="item">
-                    <img
-                      src={require("../../assets/images/dashboard/img_5.jpg")}
-                      alt="carousel-item"
-                    />
-                  </div>
-                  <div className="item">
-                    <img
-                      src={require("../../assets/images/dashboard/img_6.jpg")}
-                      alt="carousel-item"
-                    />
-                  </div>
-                </Slider>
-                {/* <div className="d-flex py-4"> */}
-                <div className="preview-list w-100">
-                  <div className="preview-item p-0">
-                    <div className="preview-thumbnail">
-                      <img
-                        src={require("../../assets/images/faces-clipart/pic-2.png")}
-                        className="rounded-circle"
-                        alt="face"
-                      />
-                    </div>
-                    <div className="preview-item-content d-flex flex-grow">
-                      <div className="flex-grow">
-                        <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                          <h6 className="preview-subject">Lingkungan Hidup</h6>
-                          <div style={{ display: "flex", gap: "8px" }}>
-                            <div
-                              onClick={this.showDelete}
-                              className="mdi mdi-delete-forever"
-                            />
-                            <div
-                              onClick={this.showDownload}
-                              className="mdi mdi-download"
-                            />
-                          </div>
-                        </div>
-                        <p className="text-muted">Selesai 20 Februari 2022</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* </div> */}
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-            <div className="card">
-              <div className="card-body">
-                <h4 className="card-title">Video</h4>
-                <Slider className="portfolio-slider" {...this.sliderSettings}>
-                  <div className="player-wrapper">
-                    <ReactPlayer
-                      className="react-player"
-                      url="https://www.youtube.com/watch?v=bjuL4WOZACs"
-                    />
-                  </div>
-                  <div className="player-wrapper">
-                    <ReactPlayer
-                      className="react-player"
-                      url="https://www.youtube.com/watch?v=YimFGM8DTzY"
-                    />
-                  </div>
-                </Slider>
-                <div className="preview-list w-100">
-                  <div className="preview-item p-0">
-                    <div className="preview-thumbnail">
-                      <img
-                        src={require("../../assets/images/faces-clipart/pic-2.png")}
-                        className="rounded-circle"
-                        alt="face"
-                      />
-                    </div>
-                    <div className="preview-item-content d-flex flex-grow">
-                      <div className="flex-grow">
-                        <div className="d-flex d-md-block d-xl-flex flex-row  justify-content-between">
-                          <h6 className="preview-subject">Lingkungan Hidup</h6>
-                          <div style={{ display: "flex", gap: "8px" }}>
-                            <div
-                              onClick={this.showDelete}
-                              className="mdi mdi-delete-forever"
-                            />
-                            <div
-                              onClick={this.showDownload}
-                              className="mdi mdi-download"
-                            />
-                          </div>
-                        </div>
-                        <p className="text-muted">Selesai 15 Februari 2022</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
-            <div className="card">
-              <div className="card-body">
-                <h4 className="card-title">Teks/Tautan</h4>
-                <div className="preview-list w-100">
-                  <div className="preview-item p-0">
-                    <div className="preview-thumbnail">
-                      <img
-                        src={require("../../assets/images/faces-clipart/pic-2.png")}
-                        className="rounded-circle"
-                        alt="face"
-                      />
-                    </div>
-                    <div className="preview-item-content d-flex flex-grow">
-                      <div className="flex-grow">
-                        <div className="d-flex d-md-block d-xl-flex justify-content-between">
-                          <h6 className="preview-subject">Lingkungan Hidup</h6>
-                        </div>
-                        <p className="text-muted">Selesai 15 Februari 2022</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-muted">
-                  Sudah dipublikasikan. Berikut adalah link post
-                  https://instagram.com
-                </p>
               </div>
             </div>
           </div>

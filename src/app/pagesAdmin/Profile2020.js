@@ -60,6 +60,23 @@ export class Profile2020 extends Component {
       },
     });
   };
+  showEdit = () => {
+    Swal.fire({
+      title: "Edit Data",
+      html: `<input type="text" id="login" class="swal2-input" placeholder="Username">
+      <input type="password" id="password" class="swal2-input" placeholder="Password Baru">`,
+      confirmButtonText: "Ubah",
+      focusConfirm: false,
+      background: '#191c20',
+      preConfirm: () => {
+        const login = Swal.getPopup().querySelector("#login").value;
+        const password = Swal.getPopup().querySelector("#password").value;
+        if (!login || !password) {
+          Swal.showValidationMessage(`Please enter login and password`);
+        }
+      },
+    });
+  };
   render() {
     return (
       <div>

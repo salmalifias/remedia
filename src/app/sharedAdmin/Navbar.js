@@ -106,7 +106,7 @@ class Navbar extends Component {
                 <Dropdown.Divider />
                 <Dropdown.Item
                   className="dropdown-item preview-item"
-                  onClick={() => history.push("/view-permintaan-desain")}
+                  onClick={() => history.push("/view-permintaan-desain2")}
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">

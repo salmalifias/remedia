@@ -15,10 +15,10 @@ export class Dashboard extends Component {
                   <Row>
                     <Form.Group className="form-sort ">
                       <select className="form-control" id="sortby">
-                        <option>Status Permintaan</option>
-                        <option>Permintaan diproses</option>
-                        <option>Permintaan ditolak</option>
-                        <option>Permintaan selesai</option>
+                        <option style={{color:"#c3c5cf"}}>Status Permintaan</option>
+                        <option style={{color:"#c3c5cf"}}>Permintaan diproses</option>
+                        <option style={{color:"#c3c5cf"}}>Permintaan ditolak</option>
+                        <option style={{color:"#c3c5cf"}}>Permintaan selesai</option>
                       </select>
                     </Form.Group>
                     <Form.Group className="form-sort">
@@ -31,22 +31,22 @@ export class Dashboard extends Component {
                     </Form.Group>
                     <Form.Group className="form-sort">
                       <select className="form-control" id="sortby">
-                        <option>Semua Permintaan</option>
-                        <option>Videografi</option>
-                        <option>Desain</option>
-                        <option>Publikasi</option>
-                        <option>Website</option>
+                        <option style={{color:"#c3c5cf"}}>Semua Permintaan</option>
+                        <option style={{color:"#c3c5cf"}}>Videografi</option>
+                        <option style={{color:"#c3c5cf"}}>Desain</option>
+                        <option style={{color:"#c3c5cf"}}>Publikasi</option>
+                        <option style={{color:"#c3c5cf"}}>Website</option>
                       </select>
                     </Form.Group>
                     <Form.Group className="form-sort">
                       <select className="form-control" id="sortby">
-                        <option>Semua Bidang</option>
-                        <option>Kemahasiswaan</option>
-                        <option>Kemasyarakatan</option>
-                        <option>Kominfo</option>
-                        <option>DKKP</option>
-                        <option>Sekretariat Umum</option>
-                        <option>Miba</option>
+                        <option style={{color:"#c3c5cf"}}>Semua Bidang</option>
+                        <option style={{color:"#c3c5cf"}}>Kemahasiswaan</option>
+                        <option style={{color:"#c3c5cf"}}>Kemasyarakatan</option>
+                        <option style={{color:"#c3c5cf"}}>Kominfo</option>
+                        <option style={{color:"#c3c5cf"}}>DKKP</option>
+                        <option style={{color:"#c3c5cf"}}>Sekretariat Umum</option>
+                        <option style={{color:"#c3c5cf"}}>Miba</option>
                       </select>
                     </Form.Group>
                     <button

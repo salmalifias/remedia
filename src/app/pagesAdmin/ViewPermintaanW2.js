@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaanV extends Component {
+export class ViewPermintaanW extends Component {
   showDelete = () => {
     Swal.fire({
       title: "Apakah Anda Yakin?",
@@ -38,9 +38,6 @@ export class ViewPermintaanV extends Component {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
       background: '#191c20'
-    }).then(function () {
-      // Redirect the user
-      window.location.href = "/view-permintaan-video2";
     });
   };
   render() {
@@ -54,7 +51,7 @@ export class ViewPermintaanV extends Component {
                   RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
                 </h4>
                 <div className="d-flex flex-row justify-content-between">
-                  <h6 className="card-title">Permintaan Videografi</h6>
+                  <h6 className="card-title">Permintaan Website</h6>
                   <div style={{ display: "flex", gap: "8px" }}>
                     <div
                       onClick={this.showDelete}
@@ -66,11 +63,6 @@ export class ViewPermintaanV extends Component {
                     />
                   </div>
                 </div>
-                <p className="card-description">
-                  <b>Referensi : </b>www.youtube.com
-                  <br />
-                  <b>Durasi : </b>www.youtube.com
-                </p>
                 <div style={{ display: "block" }}>
                   <img
                     style={{ margin: "4px" }}
@@ -93,11 +85,15 @@ export class ViewPermintaanV extends Component {
                     height="110"
                     alt="carousel-item"
                   />
+                  <img
+                    style={{ margin: "4px" }}
+                    src={require("../../assets/images/dashboard/img_7.jpg")}
+                    width="180"
+                    height="110"
+                    alt="carousel-item"
+                  />
                 </div>
                 <p className="card-description">
-                  <br />
-                  <b>Detail</b>
-                  <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   ac nunc ut magna porttitor euismod eu et nunc. Sed interdum
                   quam vulputate quam scelerisque, vitae accumsan libero
@@ -110,17 +106,6 @@ export class ViewPermintaanV extends Component {
                   conubia nostra, per inceptos himenaeos. Curabitur sit amet sem
                   dapibus, sagittis risus in, vulputate nibh. Phasellus gravida
                   finibus est sed vehicula.
-                  <br />
-                  <br />
-                  <b>Slide Cover/thumbnail</b>
-                  <br />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
-                    height="110"
-                    alt="carousel-item"
-                  />
                 </p>
               </div>
             </div>
@@ -177,9 +162,41 @@ export class ViewPermintaanV extends Component {
             </div>
           </div>
         </div>
+        <div className="row">
+          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
+            <div className="card">
+              <div className="card-body">
+                <h4 className="card-title">Teks/Tautan</h4>
+                <div className="preview-list w-100">
+                  <div className="preview-item p-0">
+                    <div className="preview-thumbnail">
+                      <img
+                        src={require("../../assets/images/faces-clipart/pic-2.png")}
+                        className="rounded-circle"
+                        alt="face"
+                      />
+                    </div>
+                    <div className="preview-item-content d-flex flex-grow">
+                      <div className="flex-grow">
+                        <div className="d-flex d-md-block d-xl-flex justify-content-between">
+                          <h6 className="preview-subject">Lingkungan Hidup</h6>
+                        </div>
+                        <p className="text-muted">Selesai 15 Februari 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted">
+                  Sudah dipublikasikan. Berikut adalah link post
+                  https://kema.unpad.ac.id/RONALDINHO
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-export default ViewPermintaanV;
+export default ViewPermintaanW;

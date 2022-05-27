@@ -101,9 +101,9 @@ export class PerminDesain2 extends Component {
                       // onClick={this.showAlert}
                       onClick={() => this.addFormFields()}
                       type="button"
-                      className="btn btn-primary mr-2"
+                      className="btn btn-secondary"
                     >
-                      +
+                      + Slide
                     </button>
                   </div>
                 </form>
