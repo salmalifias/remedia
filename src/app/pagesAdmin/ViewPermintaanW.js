@@ -70,28 +70,21 @@ export class ViewPermintaanW extends Component {
                   <img
                     style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
+                    width="auto"
                     height="110"
                     alt="carousel-item"
                   />
                   <img
                     style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="110"
+                    width="auto"
                     height="110"
                     alt="carousel-item"
                   />
                   <img
                     style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="110"
-                    height="110"
-                    alt="carousel-item"
-                  />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
+                    src={require("../../assets/images/dashboard/img_8.jpg")}
+                    width="auto"
                     height="110"
                     alt="carousel-item"
                   />

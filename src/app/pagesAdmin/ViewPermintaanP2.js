@@ -72,28 +72,21 @@ export class ViewPermintaanP extends Component {
                   <img
                     style={{ margin: "4px" }}
                     src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
+                    width="auto"
                     height="110"
                     alt="carousel-item"
                   />
                   <img
                     style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="110"
+                    src={require("../../assets/images/dashboard/img_5.jpg")}
+                    width="auto"
                     height="110"
                     alt="carousel-item"
                   />
                   <img
                     style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="110"
-                    height="110"
-                    alt="carousel-item"
-                  />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="180"
+                    src={require("../../assets/images/dashboard/img_6.jpg")}
+                    width="auto"
                     height="110"
                     alt="carousel-item"
                   />
