@@ -47,7 +47,7 @@ export class Login extends Component {
                     <div className="form-check">
                       <label className="form-check-label text-muted">
                         <input type="checkbox" className="form-check-input" />
-                        <i className="input-helper"></i>
+                        {/* <i className="input-helper"></i> */}
                         Keep me signed in
                       </label>
                     </div>
