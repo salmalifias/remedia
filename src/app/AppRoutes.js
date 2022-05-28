@@ -24,6 +24,9 @@ class AppRoutes extends Component {
     return (
       <Suspense fallback={<div/>}>
         <Switch>
+          <Route exact path="/">
+            <Redirect to="/login"/>
+          </Route>
           <Route exact path="/dashboard" component={ Dashboard } />
           <Route path="/login" component={ Login } />
           <Route path="/profile" component={ Profile } />
