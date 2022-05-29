@@ -1,7 +1,7 @@
 {
   "name": "remedia",
   "version": "1.1.0",
-  "homepage": "http://localhost:3000/dashboard",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@mdi/font": "^4.2.95",
