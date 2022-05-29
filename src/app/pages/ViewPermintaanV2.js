@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Form } from "react-bootstrap";
+import Slider from "react-slick";
+import ReactPlayer from "react-player";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaanW extends Component {
+export class ViewPermintaanV extends Component {
   showDelete = () => {
     Swal.fire({
       title: "Apakah Anda Yakin?",
@@ -51,7 +52,7 @@ export class ViewPermintaanW extends Component {
                   RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
                 </h4>
                 <div className="d-flex flex-row justify-content-between">
-                  <h6 className="card-title">Permintaan Website</h6>
+                  <h6 className="card-title">Permintaan Videografi</h6>
                   <div style={{ display: "flex", gap: "8px" }}>
                     <div
                       onClick={this.showDelete}
@@ -63,6 +64,11 @@ export class ViewPermintaanW extends Component {
                     />
                   </div>
                 </div>
+                <p className="card-description">
+                  <b>Referensi : </b>www.youtube.com
+                  <br />
+                  <b>Durasi : </b>www.youtube.com
+                </p>
                 <div style={{ display: "block" }}>
                   <img
                     style={{ margin: "4px" }}
@@ -73,20 +79,16 @@ export class ViewPermintaanW extends Component {
                   />
                   <img
                     style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_7.jpg")}
-                    width="auto"
-                    height="110"
-                    alt="carousel-item"
-                  />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_8.jpg")}
+                    src={require("../../assets/images/dashboard/img_9.jpg")}
                     width="auto"
                     height="110"
                     alt="carousel-item"
                   />
                 </div>
                 <p className="card-description">
+                  <br />
+                  <b>Detail</b>
+                  <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   ac nunc ut magna porttitor euismod eu et nunc. Sed interdum
                   quam vulputate quam scelerisque, vitae accumsan libero
@@ -99,63 +101,73 @@ export class ViewPermintaanW extends Component {
                   conubia nostra, per inceptos himenaeos. Curabitur sit amet sem
                   dapibus, sagittis risus in, vulputate nibh. Phasellus gravida
                   finibus est sed vehicula.
+                  <br />
+                  <br />
+                  <b>Slide Cover/thumbnail</b>
+                  <br />
+                  <img
+                    style={{ margin: "4px" }}
+                    src={require("../../assets/images/dashboard/img_8.jpg")}
+                    width="auto"
+                    height="110"
+                    alt="carousel-item"
+                  />
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12 grid-margin stretch-card">
+          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
-                <h4 className="card-title">Hasil Permintaan</h4>
-                <form className="forms-sample">
-                  <Form.Group>
-                    <select className="form-control" id="sortby">
-                      <option style={{color:"#c3c5cf"}}>Terima/Tolak</option>
-                      <option style={{color:"#c3c5cf"}}>Terima</option>
-                      <option style={{color:"#c3c5cf"}}>Tolak</option>
-                    </select>
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Photo/File</label>
-                    <div className="custom-file">
-                      <Form.Control
-                        type="file"
-                        className="form-control visibility-hidden"
-                        id="customFileLang"
-                        lang="es"
-                      />
-                      <label
-                        className="custom-file-label text-muted"
-                        htmlFor="customFileLang"
-                      >
-                        Tambahkan
-                      </label>
-                    </div>
-                  </Form.Group>
-                  <Form.Group>
-                    <label htmlFor="exampleInputUsername1">Catatan/Link</label>
-                    <Form.Control
-                      type="text"
-                      id="exampleInputUsername1"
-                      placeholder="Username"
+                <h4 className="card-title">Video</h4>
+                <Slider className="portfolio-slider" {...this.sliderSettings}>
+                  <div className="player-wrapper">
+                    <ReactPlayer
+                      className="react-player"
+                      url="https://www.youtube.com/watch?v=bjuL4WOZACs"
                     />
-                  </Form.Group>
-                  <button
-                    type="button"
-                    onClick={this.showAdd}
-                    className="btn btn-primary mr-2"
-                  >
-                    Add
-                  </button>
-                  <button className="btn btn-dark">Cancel</button>
-                </form>
+                  </div>
+                  <div className="player-wrapper">
+                    <ReactPlayer
+                      className="react-player"
+                      url="https://www.youtube.com/watch?v=YimFGM8DTzY"
+                    />
+                  </div>
+                </Slider>
+                <div className="preview-list w-100">
+                  <div className="preview-item p-0">
+                    <div className="preview-thumbnail">
+                      <img
+                        src={require("../../assets/images/faces-clipart/pic-2.png")}
+                        className="rounded-circle"
+                        alt="face"
+                      />
+                    </div>
+                    <div className="preview-item-content d-flex flex-grow">
+                      <div className="flex-grow">
+                        <div className="d-flex d-md-block d-xl-flex flex-row  justify-content-between">
+                          <h6 className="preview-subject">Lingkungan Hidup</h6>
+                          <div style={{ display: "flex", gap: "8px" }}>
+                            <div
+                              onClick={this.showDelete}
+                              className="mdi mdi-delete-forever"
+                            />
+                            <div
+                              onClick={this.showDownload}
+                              className="mdi mdi-download"
+                            />
+                          </div>
+                        </div>
+                        <p className="text-muted">Selesai 15 Februari 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="row">
           <div className="col-md-6 col-xl-4 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
@@ -180,8 +192,8 @@ export class ViewPermintaanW extends Component {
                   </div>
                 </div>
                 <p className="text-muted">
-                  Sudah dipublikasikan. Berikut adalah link post
-                  https://kema.unpad.ac.id/RONALDINHO
+                  Terdapat beberapa pilihan video yang dapat di fiksasi. Berikut adalah link gdrive untuk video" lainnya
+                  https://drive.google.com/hwbdjdSH
                 </p>
               </div>
             </div>
@@ -192,4 +204,4 @@ export class ViewPermintaanW extends Component {
   }
 }
 
-export default ViewPermintaanW;
+export default ViewPermintaanV;

@@ -1,7 +1,7 @@
 .navbar {
   font-weight: normal;
   background: $navbar-bg;
-  left: $sidebar-width-lg;
+  // left: $sidebar-width-lg;
   transition:left $action-transition-duration $action-transition-timing-function;
   -webkit-transition:left $action-transition-duration $action-transition-timing-function;
   -moz-transition:left $action-transition-duration $action-transition-timing-function;

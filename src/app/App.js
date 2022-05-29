@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './App.scss';
 import AppRoutes from './AppRoutes';
-import Navbar from './sharedAdmin/Navbar';
-import Sidebar from './sharedAdmin/Sidebar';
+import Navbar from './shared/Navbar';
 
 class App extends Component {
   state = {}
@@ -13,10 +12,8 @@ class App extends Component {
 
   render () {
     let navbarComponent = !this.state.isFullPageLayout ? <Navbar/> : '';
-    let sidebarComponent = !this.state.isFullPageLayout ? <Sidebar/> : '';
     return (
-      <div className="container-scroller">
-        { sidebarComponent }
+      <div className="">
         <div className="container-fluid page-body-wrapper">
           { navbarComponent }
           <div className="main-panel">

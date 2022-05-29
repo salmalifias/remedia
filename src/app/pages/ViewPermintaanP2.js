@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Form } from "react-bootstrap";
 import "../../assets/styles/_player.scss";
 import Swal from "sweetalert2";
 
-export class ViewPermintaanV extends Component {
+export class ViewPermintaanP extends Component {
   showDelete = () => {
     Swal.fire({
       title: "Apakah Anda Yakin?",
@@ -38,9 +37,6 @@ export class ViewPermintaanV extends Component {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
       background: '#191c20'
-    }).then(function () {
-      // Redirect the user
-      window.location.href = "/view-permintaan-video2";
     });
   };
   render() {
@@ -53,8 +49,13 @@ export class ViewPermintaanV extends Component {
                 <h4 className="card-title">
                   RONALDINHO MENUJU RANS CILEGON FC: APAKAH SEPADAN?
                 </h4>
+                <p className="card-description">
+                  Departemen Seni Budaya dan Olahraga | Bidang Minat dan Bakat{" "}
+                  <br />
+                  Publikasi Tanggal 29 Februari 2021
+                </p>
                 <div className="d-flex flex-row justify-content-between">
-                  <h6 className="card-title">Permintaan Videografi</h6>
+                  <h6 className="card-title">Permintaan Publikasi</h6>
                   <div style={{ display: "flex", gap: "8px" }}>
                     <div
                       onClick={this.showDelete}
@@ -66,11 +67,6 @@ export class ViewPermintaanV extends Component {
                     />
                   </div>
                 </div>
-                <p className="card-description">
-                  <b>Referensi : </b>www.youtube.com
-                  <br />
-                  <b>Durasi : </b>www.youtube.com
-                </p>
                 <div style={{ display: "block" }}>
                   <img
                     style={{ margin: "4px" }}
@@ -81,16 +77,20 @@ export class ViewPermintaanV extends Component {
                   />
                   <img
                     style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_9.jpg")}
+                    src={require("../../assets/images/dashboard/image5.jpg")}
+                    width="auto"
+                    height="110"
+                    alt="carousel-item"
+                  />
+                  <img
+                    style={{ margin: "4px" }}
+                    src={require("../../assets/images/dashboard/img_6.jpg")}
                     width="auto"
                     height="110"
                     alt="carousel-item"
                   />
                 </div>
                 <p className="card-description">
-                  <br />
-                  <b>Detail</b>
-                  <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
                   ac nunc ut magna porttitor euismod eu et nunc. Sed interdum
                   quam vulputate quam scelerisque, vitae accumsan libero
@@ -103,69 +103,39 @@ export class ViewPermintaanV extends Component {
                   conubia nostra, per inceptos himenaeos. Curabitur sit amet sem
                   dapibus, sagittis risus in, vulputate nibh. Phasellus gravida
                   finibus est sed vehicula.
-                  <br />
-                  <br />
-                  <b>Slide Cover/thumbnail</b>
-                  <br />
-                  <img
-                    style={{ margin: "4px" }}
-                    src={require("../../assets/images/dashboard/img_8.jpg")}
-                    width="auto"
-                    height="110"
-                    alt="carousel-item"
-                  />
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12 grid-margin stretch-card">
+          <div className="col-md-6 col-xl-4 grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
-                <h4 className="card-title">Hasil Permintaan</h4>
-                <form className="forms-sample">
-                  <Form.Group>
-                    <select className="form-control" id="sortby">
-                      <option style={{color:"#c3c5cf"}}>Terima/Tolak</option>
-                      <option style={{color:"#c3c5cf"}}>Terima</option>
-                      <option style={{color:"#c3c5cf"}}>Tolak</option>
-                    </select>
-                  </Form.Group>
-                  <Form.Group>
-                    <label>Photo/File</label>
-                    <div className="custom-file">
-                      <Form.Control
-                        type="file"
-                        className="form-control visibility-hidden"
-                        id="customFileLang"
-                        lang="es"
+                <h4 className="card-title">Teks/Tautan</h4>
+                <div className="preview-list w-100">
+                  <div className="preview-item p-0">
+                    <div className="preview-thumbnail">
+                      <img
+                        src={require("../../assets/images/faces-clipart/pic-2.png")}
+                        className="rounded-circle"
+                        alt="face"
                       />
-                      <label
-                        className="custom-file-label text-muted"
-                        htmlFor="customFileLang"
-                      >
-                        Tambahkan
-                      </label>
                     </div>
-                  </Form.Group>
-                  <Form.Group>
-                    <label htmlFor="exampleInputUsername1">Catatan/Link</label>
-                    <Form.Control
-                      type="text"
-                      id="exampleInputUsername1"
-                      placeholder="Username"
-                    />
-                  </Form.Group>
-                  <button
-                    type="button"
-                    onClick={this.showAdd}
-                    className="btn btn-primary mr-2"
-                  >
-                    Add
-                  </button>
-                  <button className="btn btn-dark">Cancel</button>
-                </form>
+                    <div className="preview-item-content d-flex flex-grow">
+                      <div className="flex-grow">
+                        <div className="d-flex d-md-block d-xl-flex justify-content-between">
+                          <h6 className="preview-subject">Lingkungan Hidup</h6>
+                        </div>
+                        <p className="text-muted">Selesai 15 Februari 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted">
+                  Sudah dipublikasikan. Berikut adalah link post
+                  https://instagram.com
+                </p>
               </div>
             </div>
           </div>
@@ -175,4 +145,4 @@ export class ViewPermintaanV extends Component {
   }
 }
 
-export default ViewPermintaanV;
+export default ViewPermintaanP;

@@ -162,7 +162,7 @@
 .sidebar-icon-only {
   @media (min-width: 992px) {
     .navbar {
-      left: $sidebar-width-icon;
+      left: 0px;
       .navbar-menu-wrapper {
         width: 100%;
       }

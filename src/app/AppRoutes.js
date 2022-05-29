@@ -1,23 +1,21 @@
 import React, { Component,Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import Dashboard from  "./pagesAdmin/Dashboard";
-import Login from "./pagesAdmin/Login";
-import Profile from "./pagesAdmin/Profile";
-import Profile2020 from "./pagesAdmin/Profile2020";
-import PerminVideo from "./pagesAdmin/PerminVideo";
-import PerminWebsite from "./pagesAdmin/PerminWebsite";
-import PerminPublikasi from "./pagesAdmin/PerminPublikasi";
-import PerminDesain1 from "./pagesAdmin/PerminDesain1";
-import PerminDesain2 from "./pagesAdmin/PerminDesain2";
-import ViewPermintaanW from "./pagesAdmin/ViewPermintaanW";
-import ViewPermintaanV from "./pagesAdmin/ViewPermintaanV";
-import ViewPermintaanP from "./pagesAdmin/ViewPermintaanP";
-import ViewPermintaanD from "./pagesAdmin/ViewPermintaanD";
-import ViewPermintaanW2 from "./pagesAdmin/ViewPermintaanW2";
-import ViewPermintaanV2 from "./pagesAdmin/ViewPermintaanV2";
-import ViewPermintaanP2 from "./pagesAdmin/ViewPermintaanP2";
-import ViewPermintaanD2 from "./pagesAdmin/ViewPermintaanD2";
+import Dashboard from  "./pages/Dashboard";
+import Login from "./pages/Login";
+import PerminVideo from "./pages/PerminVideo";
+import PerminWebsite from "./pages/PerminWebsite";
+import PerminPublikasi from "./pages/PerminPublikasi";
+import PerminDesain1 from "./pages/PerminDesain1";
+import PerminDesain2 from "./pages/PerminDesain2";
+import ViewPermintaanW from "./pages/ViewPermintaanW";
+import ViewPermintaanV from "./pages/ViewPermintaanV";
+import ViewPermintaanP from "./pages/ViewPermintaanP";
+import ViewPermintaanD from "./pages/ViewPermintaanD";
+import ViewPermintaanW2 from "./pages/ViewPermintaanW2";
+import ViewPermintaanV2 from "./pages/ViewPermintaanV2";
+import ViewPermintaanP2 from "./pages/ViewPermintaanP2";
+import ViewPermintaanD2 from "./pages/ViewPermintaanD2";
 
 class AppRoutes extends Component {
   render () {
@@ -29,8 +27,6 @@ class AppRoutes extends Component {
           </Route>
           <Route exact path="/dashboard" component={ Dashboard } />
           <Route path="/login" component={ Login } />
-          <Route path="/profile" component={ Profile } />
-          <Route path="/profile2020" component={ Profile2020 } />
           <Route path="/permintaan-video" component={ PerminVideo } />
           <Route path="/permintaan-website" component={ PerminWebsite } />
           <Route path="/permintaan-publikasi" component={ PerminPublikasi } />
