@@ -124,7 +124,6 @@ export class Profile2020 extends Component {
                       <h3 className="mb-0">560</h3>
                     </div>
                   </div>
-                  <div className="col-3"></div>
                 </div>
                 <h6 className="text-muted font-weight-normal">
                   Permintaan Publikasi
@@ -141,7 +140,6 @@ export class Profile2020 extends Component {
                       <h3 className="mb-0">359</h3>
                     </div>
                   </div>
-                  <div className="col-3"></div>
                 </div>
                 <h6 className="text-muted font-weight-normal">
                   Permintaan Desain
@@ -158,7 +156,6 @@ export class Profile2020 extends Component {
                       <h3 className="mb-0">16</h3>
                     </div>
                   </div>
-                  <div className="col-3"></div>
                 </div>
                 <h6 className="text-muted font-weight-normal">
                   Permintaan Website
@@ -175,7 +172,6 @@ export class Profile2020 extends Component {
                       <h3 className="mb-0">26</h3>
                     </div>
                   </div>
-                  <div className="col-3"></div>
                 </div>
                 <h6 className="text-muted font-weight-normal">
                   Permintaan Videografi

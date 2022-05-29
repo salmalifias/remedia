@@ -238,7 +238,6 @@ export class ViewPermintaanD extends Component {
                     </div>
                   </div>
                 </div>
-                {/* </div> */}
               </div>
             </div>
           </div>
