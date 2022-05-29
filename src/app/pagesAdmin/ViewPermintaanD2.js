@@ -198,7 +198,7 @@ export class ViewPermintaanD extends Component {
                   </div>
                   <div className="item">
                     <img
-                      src={require("../../assets/images/dashboard/img_5.jpg")}
+                      src={require("../../assets/images/dashboard/image5.jpg")}
                       alt="carousel-item"
                     />
                   </div>
@@ -209,7 +209,6 @@ export class ViewPermintaanD extends Component {
                     />
                   </div>
                 </Slider>
-                {/* <div className="d-flex py-4"> */}
                 <div className="preview-list w-100">
                   <div className="preview-item p-0">
                     <div className="preview-thumbnail">
