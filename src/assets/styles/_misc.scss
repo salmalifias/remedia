@@ -20,7 +20,6 @@ body {
   @include flex-direction(row);
   padding-left: 0;
   padding-right: 0;
-  width: calc(100% - #{$sidebar-width-lg});
   transition: width $action-transition-duration $action-transition-timing-function, margin $action-transition-duration $action-transition-timing-function;
 
   &.full-page-wrapper {

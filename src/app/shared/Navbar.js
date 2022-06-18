@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Dropdown } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 
-
 class Navbar extends Component {
   render() {
     const{history}=this.props;
@@ -29,7 +28,7 @@ class Navbar extends Component {
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-file-outline text-primary"></i>
+                      <i className="mdi mdi-drawing text-primary"></i>
                     </div>
                   </div>
                   <div className="preview-item-content">
@@ -43,7 +42,7 @@ class Navbar extends Component {
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-web text-info"></i>
+                      <i className="mdi mdi-video text-info"></i>
                     </div>
                   </div>
                   <div className="preview-item-content">
@@ -57,7 +56,7 @@ class Navbar extends Component {
                 >
                   <div className="preview-thumbnail">
                     <div className="preview-icon bg-dark rounded-circle">
-                      <i className="mdi mdi-layers text-danger"></i>
+                      <i className="mdi mdi-web text-danger"></i>
                     </div>
                   </div>
                   <div className="preview-item-content">
@@ -163,7 +162,7 @@ class Navbar extends Component {
                     alt="profile"
                   />
                   <p className="mb-0 d-none d-sm-block navbar-profile-name">
-                    Media Kreatif
+                    MSDM
                   </p>
                   <i className="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
